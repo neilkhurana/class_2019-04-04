@@ -7,9 +7,17 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(readr)
 ```
 
-```{r cold_Call}
+```{r cold_call}
+names <- read_csv("class_names.csv", col_names = FALSE) %>% 
+  select(X2, X1) %>% 
+  unite(name, sep = " ")
 
+cold_call <- function(){
+  
+}
 ```
 
